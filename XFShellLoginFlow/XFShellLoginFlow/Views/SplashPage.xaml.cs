@@ -22,7 +22,7 @@ namespace XFShellLoginFlow.Views
             base.OnAppearing();
 
             //Initialize something you want here
-            await Task.Delay(1500);
+            await Task.Delay(5000);
 
             //Transition to FirstPage
             App.Current.MainPage = new AppShell();

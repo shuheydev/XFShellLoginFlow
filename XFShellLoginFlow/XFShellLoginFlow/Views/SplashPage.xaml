@@ -4,16 +4,26 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:lottie="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
     <ContentPage.Content>
         <StackLayout>
-            <ActivityIndicator
+            <!--<ActivityIndicator
                 HorizontalOptions="CenterAndExpand"
                 IsRunning="True"
                 IsVisible="True"
                 VerticalOptions="CenterAndExpand"
-                Color="Red" />
+                Color="Red" />-->
+
+            <lottie:AnimationView
+                x:Name="AnimationView"
+                Animation="5834-pouring.json"
+                AutoPlay="True"
+                HorizontalOptions="FillAndExpand"
+                Loop="true"
+                Speed="1.0"
+                VerticalOptions="FillAndExpand" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
