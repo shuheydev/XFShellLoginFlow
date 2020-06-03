@@ -43,6 +43,19 @@
                     <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
                 </Label.GestureRecognizers>
             </Label>
+            <Label
+                HorizontalOptions="CenterAndExpand"
+                Text="{Binding Message, Mode=OneWay}"
+                TextColor="Red">
+                <Label.Triggers>
+                    <DataTrigger
+                        Binding="{Binding Message}"
+                        TargetType="Label"
+                        Value="">
+                        <Setter Property="IsVisible" Value="False" />
+                    </DataTrigger>
+                </Label.Triggers>
+            </Label>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

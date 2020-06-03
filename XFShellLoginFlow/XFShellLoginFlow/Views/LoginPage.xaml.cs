@@ -51,12 +51,25 @@ namespace XFShellLoginFlow.Views
 
         private void Button_Clicked(object sender, EventArgs e)
         {
+            if (!ValidateUserInput(this.UserName, this.Password))
+                return;
+
             //Login process
             //Check username and password etc..
             if (CheckUser(this.UserName, this.Password))
                 App.Current.MainPage = new AppShell();
             else
                 this.Message = "Wrong username or password.";
+        }
+
+        private bool ValidateUserInput(string userName, string password)
+        {
+            if (string.IsNullOrEmpty(userName) || string.IsNullOrEmpty(password))
+            {
+                this.Message = "Fill Username and Password.";
+                return false;
+            }
+            return true;
         }
 
         private bool CheckUser(string userName, string password)
