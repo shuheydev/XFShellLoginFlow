@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XFShellLoginFlow.Views.LoginPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:views="clr-namespace:XFShellLoginFlow.Views"
+    Visual="Material"
+    mc:Ignorable="d">
+    <d:ContentPage.BindingContext>
+        <views:LoginPage />
+    </d:ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Entry">
+                <Setter Property="PlaceholderColor" Value="#ff0000" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout
+            Margin="50,15"
+            Spacing="12"
+            VerticalOptions="Center">
+            <Entry Placeholder="Username" Text="{Binding UserName, Mode=OneWayToSource}" />
+            <Entry
+                IsPassword="True"
+                Placeholder="Password"
+                Text="{Binding Password, Mode=OneWayToSource}" />
+            <Button
+                BackgroundColor="Blue"
+                Clicked="Button_Clicked"
+                Text="Login"
+                TextColor="White" />
+            <Label
+                x:Name="RegistrationBtn"
+                HorizontalTextAlignment="Center"
+                Text="Registration"
+                TextColor="White"
+                TextDecorations="Underline">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

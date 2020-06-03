@@ -11,9 +11,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Com.Airbnb.Xamarin.Forms.Lottie" Version="3.0.2" />
+    <PackageReference Include="Com.Airbnb.Xamarin.Forms.Lottie" Version="3.0.4" />
     <PackageReference Include="Xamarin.Forms" Version="4.6.0.800" />
     <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
+    <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.6.0.800" />
   </ItemGroup>
 
   <ItemGroup>
@@ -27,6 +28,12 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\FirstPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\LoginPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\RegistrationPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\SplashPage.xaml">

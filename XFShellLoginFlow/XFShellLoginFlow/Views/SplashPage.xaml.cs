@@ -25,7 +25,7 @@ namespace XFShellLoginFlow.Views
             await Task.Delay(5000);
 
             //Transition to FirstPage
-            App.Current.MainPage = new AppShell();
+            App.Current.MainPage = new LoginPage();
         }
     }
 }
