@@ -47,6 +47,9 @@ namespace XFShellLoginFlow.Views
         {
             InitializeComponent();
             this.BindingContext = this;
+
+            //ナビゲーションバーを非表示に
+            NavigationPage.SetHasNavigationBar(this, false);
         }
 
         private void Button_Clicked(object sender, EventArgs e)
@@ -82,7 +85,7 @@ namespace XFShellLoginFlow.Views
 
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
-            App.Current.MainPage = new RegistrationPage();
+            App.Current.MainPage.Navigation.PushModalAsync(new RegistrationPage());
         }
     }
 }

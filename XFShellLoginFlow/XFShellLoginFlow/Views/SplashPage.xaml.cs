@@ -16,7 +16,7 @@ namespace XFShellLoginFlow.Views
         {
             InitializeComponent();
         }
-        
+
         protected override async void OnAppearing()
         {
             base.OnAppearing();
@@ -25,7 +25,7 @@ namespace XFShellLoginFlow.Views
             await Task.Delay(5000);
 
             //Transition to FirstPage
-            App.Current.MainPage = new LoginPage();
+            App.Current.MainPage = new NavigationPage(new LoginPage());
         }
     }
 }
